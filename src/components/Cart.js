@@ -23,8 +23,12 @@ const Cart = () => {
         }
     )
   }
+
+  const clearCart = () =>{
+    return dispatch({type:"CLEAR_ALL"})
+  }
   return (
-    <cartContext.Provider value={{ ...state,removeItem }}>
+    <cartContext.Provider value={{ ...state,removeItem,clearCart}}>
       <ContextCart />
     </cartContext.Provider>
   );

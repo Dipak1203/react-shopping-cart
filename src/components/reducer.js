@@ -7,6 +7,10 @@ const reducer = (state,action) =>{
             })
         }
     }
+
+    if(action.type==="CLEAR_ALL"){
+        return {...state,item:[]}
+    }
     return state;
 }
 
