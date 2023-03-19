@@ -1,5 +1,9 @@
+import {useContext} from 'react'
+import { cartContext } from './Cart';
 const Items = ({ id, img, price, description, title, quantity }) => {
   // console.log(items)
+
+  const {removeItem} = useContext(cartContext);
   return (
     <>
       <div className="items-info" key={id}>
@@ -20,7 +24,7 @@ const Items = ({ id, img, price, description, title, quantity }) => {
         </div>
 
         <div className="remove-item">
-          <i className="fas fa-trash-alt remove"></i>
+          <i className="fas fa-trash-alt remove" onClick={() => removeItem(id)}></i>
         </div>
       </div>
       <hr />
