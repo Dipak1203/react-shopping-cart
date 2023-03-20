@@ -36,8 +36,16 @@ const Cart = () => {
       }
     )
   }
+  const decrementItem = (id) =>{
+    return dispatch(
+      {
+        type:'DECREMENT',
+        payload:id
+      }
+    )
+  }
   return (
-    <cartContext.Provider value={{ ...state,removeItem,clearCart,incrementItem}}>
+    <cartContext.Provider value={{ ...state,removeItem,clearCart,incrementItem,decrementItem}}>
       <ContextCart />
     </cartContext.Provider>
   );

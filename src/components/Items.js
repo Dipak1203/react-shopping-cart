@@ -3,7 +3,7 @@ import { cartContext } from './Cart';
 const Items = ({ id, img, price, description, title, quantity }) => {
   // console.log(items)
 
-  const {removeItem,incrementItem} = useContext(cartContext);
+  const {removeItem,incrementItem,decrementItem} = useContext(cartContext);
   return (
     <>
       <div className="items-info" key={id}>
@@ -15,7 +15,7 @@ const Items = ({ id, img, price, description, title, quantity }) => {
           <p>{description}</p>
         </div>
         <div className="add-minus-quantity">
-          <i className="fa-solid fa-minus minus"></i>
+          <i className="fa-solid fa-minus minus" onClick={() => decrementItem(id)}></i>
           <input type="text" placeholder={quantity} />
           <i className="fa-solid fa-plus add" onClick={() => incrementItem(id)}></i>
         </div>
