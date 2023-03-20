@@ -11,6 +11,18 @@ const reducer = (state,action) =>{
     if(action.type==="CLEAR_ALL"){
         return {...state,item:[]}
     }
+
+
+    if(action.type === "INCREMENT"){
+        
+        let updateCart = state.item.map((ele) =>{
+            if(ele.id === action.payload){
+                return {...ele,quantity:ele.quantity+1};
+            }
+           return ele;
+        })
+        return {...state,item:updateCart};
+    }
     return state;
 }
 

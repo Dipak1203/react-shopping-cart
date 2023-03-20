@@ -5,7 +5,7 @@
       description: "black in color",
       price: "2500",
       img: "https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-      quantity: 1,
+      quantity: 0,
     },
     {
       id: 2,
@@ -13,7 +13,7 @@
       description: "white in color",
       price: "2300",
       img: "https://images.pexels.com/photos/47261/pexels-photo-47261.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-      quantity: 1,
+      quantity: 0,
     },
     {
       id: 3,
@@ -21,7 +21,7 @@
       description: "black in color",
       price: "3500",
       img: "https://images-na.ssl-images-amazon.com/images/I/71A9Vo1BatL._SL1500_.jpg",
-      quantity: 1,
+      quantity: 0,
     },
     {
       id: 4,
@@ -29,7 +29,7 @@
       description: "Best mobile ever",
       price: "90500",
       img: "https://images-na.ssl-images-amazon.com/images/I/71hIfcIPyxS._SL1500_.jpg",
-      quantity: 1,
+      quantity: 0,
     },
     {
       id: 5,
@@ -37,7 +37,7 @@
       description: "black in color",
       price: "2500",
       img: "https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-      quantity: 1,
+      quantity: 0,
     },
     {
       id: 6,
@@ -45,7 +45,7 @@
       description: "black in color",
       price: "3500",
       img: "https://images-na.ssl-images-amazon.com/images/I/71A9Vo1BatL._SL1500_.jpg",
-      quantity: 1,
+      quantity: 0,
     },
     {
       id: 7,
@@ -53,7 +53,7 @@
       description: "black in color",
       price: "2500",
       img: "https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-      quantity: 1,
+      quantity: 0,
     },
     {
       id: 8,
