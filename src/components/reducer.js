@@ -22,14 +22,37 @@ const reducer = (state, action) => {
     return { ...state, item: updateCart };
   }
   if (action.type === "DECREMENT") {
-    let updateCart = state.item.map((ele) => {
-      if (ele.id === action.payload) {
-        return { ...ele, quantity: ele.quantity - 1 };
-      }
-      return ele;
-    });
+    let updateCart = state.item
+      .map((ele) => {
+        if (ele.id === action.payload) {
+          return { ...ele, quantity: ele.quantity - 1 };
+        }
+        return ele;
+      })
+      .filter((ele) => ele.quantity !== 0);
     return { ...state, item: updateCart };
   }
+
+  // For Quantity
+  if (action.type === "GET_TOTAL") {
+    let {totalAmount, totalItem } = state.item.reduce(
+      (acc, ele) => {
+        let { price, quantity } = ele;
+        const updatePrice = price * quantity;
+        acc.totalAmount += updatePrice;
+        acc.totalItem += quantity;
+        return acc;
+      },
+      {
+        totalItem: 0,
+        totalAmount:0,
+      }
+    );
+    return { ...state, totalItem,totalAmount };
+  }
+
+  // For Amount
+
   return state;
 };
 
